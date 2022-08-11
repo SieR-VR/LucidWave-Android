@@ -1,4 +1,4 @@
-#version 100
+
 
 #ifdef EMBEDDED
 attribute vec3 inPos;

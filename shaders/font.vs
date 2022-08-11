@@ -1,4 +1,4 @@
-#version 100
+
 #ifdef EMBEDDED
 attribute vec2 inPos;
 attribute vec2 inTex;

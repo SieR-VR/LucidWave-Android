@@ -1,4 +1,4 @@
-#version 100
+
 #ifdef EMBEDDED
 varying vec2 texVp;
 #else
