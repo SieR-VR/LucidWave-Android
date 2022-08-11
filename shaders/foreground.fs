@@ -27,5 +27,5 @@ uniform float clearTransition;
 
 void main()
 {
-    target = vec4(0);
+    target = vec4(0.0);
 }

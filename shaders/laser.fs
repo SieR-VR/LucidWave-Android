@@ -72,7 +72,7 @@ void main()
 	s /= 3.0;
 	target = texture(mainTex, vec2(x, s + y / 4.0 + 0.05));
 	return;
-	vec4 mainColor = texture(mainTex, vec2(x, s / 4 + y / 4));
+	vec4 mainColor = texture(mainTex, vec2(x, s / 4.0 + y / 4.0));
 
     vec3 mainHsv = rgb2hsv(mainColor.xyz);
     vec3 colorHsv = rgb2hsv(color.xyz);

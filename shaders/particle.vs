@@ -27,5 +27,5 @@ void main()
 {
 	fsColor = inColor;
 	fsParams = inParams;
-	gl_Position = vec4(inPos,1);
+	gl_Position = vec4(inPos,1.0);
 }

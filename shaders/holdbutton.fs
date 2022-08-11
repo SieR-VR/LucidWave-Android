@@ -17,6 +17,6 @@ uniform int hitState;
 void main()
 {
 	float s = float(hitState);
-	vec4 color = texture(mainTex, vec2(fsTex.x, s / 4 + fsTex.y / 4));
+	vec4 color = texture(mainTex, vec2(fsTex.x, s / 4.0  + fsTex.y / 4.0));
 	target = color;
 }

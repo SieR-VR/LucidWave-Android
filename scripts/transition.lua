@@ -3,7 +3,7 @@ local outTimer = 1
 local animTimer = 0
 
 local played = false
-game.LoadSkinSample("exit_gameplay")
+game.LoadSkinSample("exit_gameplay.wav")
 
 local resx, resy
 local portrait

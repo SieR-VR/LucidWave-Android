@@ -6,8 +6,8 @@ local grade = nil;
 local lastGrade = -1;
 local toggleStats = true
 
-game.LoadSkinSample('result');
-game.LoadSkinSample('shutter');
+game.LoadSkinSample('result.wav');
+game.LoadSkinSample('shutter.wav');
 
 local resx;
 local resy;

@@ -25,7 +25,7 @@ void main()
     vec2 current = vec2(fsTex.x, texture(graphTex, vec2(fsTex.x, 0.5f)).x);
     vec2 next = vec2(fsTex.x + xStep, texture(graphTex, vec2(clamp(fsTex.x + xStep, 0.0f, 1.0f) , 0.5f)).x);
     vec2 avg = (current + next) / 2.0;
-    float dist = abs(distance(vec2(fsTex.x,fsTex.y * -1 + 1.),avg));
+    float dist = abs(distance(vec2(fsTex.x,fsTex.y * -1.0 + 1.),avg));
     
     if (avg.y >= colorBorder)
         col = upperColor.xyz;

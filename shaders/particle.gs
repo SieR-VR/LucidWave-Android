@@ -43,8 +43,8 @@ void main()
 	
 	vec2 rightAxis2D = vec2(cos(fRotation), sin(fRotation));
 	vec2 upAxis2D = vec2(-sin(fRotation), cos(fRotation));
-	vec4 cameraRight = billboard * vec4(rightAxis2D, 0, 0);
-	vec4 cameraUp = billboard * vec4(upAxis2D, 0, 0);
+	vec4 cameraRight = billboard * vec4(rightAxis2D, .0, .0);
+	vec4 cameraUp = billboard * vec4(upAxis2D, .0, .0);
 	
 	gl_Position = proj * camera * (gl_in[0].gl_Position + (-cameraRight - cameraUp) * fScale);
 	fsColor = inColor[0];

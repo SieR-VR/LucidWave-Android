@@ -17,7 +17,7 @@ void main()
 #ifdef EMBEDDED
 	float alpha = texture2D(mainTex, fsTex / vec2(mapSize)).a;
 #else
-	float alpha = texelFetch(mainTex, ivec2(fsTex), 0).a;
+	float alpha = texelFetch(mainTex, ivec2(fsTex), 0.0).a;
 #endif
 	target = vec4(color.xyz, alpha * color.a);
 }

@@ -4,7 +4,7 @@ local animTimer = 0
 local jacket = 0
 
 local played = false
-game.LoadSkinSample("start_gameplay")
+game.LoadSkinSample("start_gameplay.wav")
 
 local resx, resy
 local portrait

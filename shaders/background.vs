@@ -21,5 +21,5 @@ uniform ivec2 viewport;
 void main()
 {
 	texVp = inTex * vec2(viewport);
-	gl_Position = vec4(inPos.xy, 0, 1);
+	gl_Position = vec4(inPos.xy, 0.0, 1.0);
 }

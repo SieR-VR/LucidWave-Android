@@ -23,5 +23,5 @@ void main()
 {
 	fsTex = inTex;
 	fsTex.y = -fsTex.y;
-	gl_Position = proj * camera * world * vec4(inPos.xy, 0, 1);
+	gl_Position = proj * camera * world * vec4(inPos.xy, 0.0, 1.0);
 }

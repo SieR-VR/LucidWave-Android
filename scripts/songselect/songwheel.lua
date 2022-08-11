@@ -1,8 +1,8 @@
-easing = require('easing');
+easing = require('../easing');
 
-game.LoadSkinSample('cursor_song');
-game.LoadSkinSample('cursor_difficulty');
-game.LoadSkinSample('woosh');
+game.LoadSkinSample('cursor_song.wav');
+game.LoadSkinSample('cursor_difficulty.wav');
+game.LoadSkinSample('woosh.wav');
 
 local resx;
 local resy;
