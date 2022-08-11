@@ -1,7 +1,13 @@
-#version 330
-#extension GL_ARB_separate_shader_objects : enable
+#version 100
 layout(points) in;
 layout(triangle_strip, max_vertices = 36) out;
+
+ifdef EMBEDDED
+
+varying vec2 fsTex;
+
+#else
+#extension GL_ARB_separate_shader_objects : enable
 
 // Input
 in gl_PerVertex
@@ -14,7 +20,8 @@ out gl_PerVertex
 {
 	vec4 gl_Position;
 };
-layout(location=1) out vec2 fsTex;
+layout(location=2) out vec2 fsTex;
+#endif
 
 uniform mat4 proj;
 uniform mat4 world;

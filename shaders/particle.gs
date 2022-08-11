@@ -1,7 +1,18 @@
-#version 330
-#extension GL_ARB_separate_shader_objects : enable
+#version 100
+
 layout(points) in;
 layout(triangle_strip, max_vertices = 4) out;
+
+#ifdef EMBEDDED
+
+attribute vec4 inColor[1];
+attribute vec4 inParams[1];
+
+varying vec4 fsColor;
+varying vec2 fsTex;
+
+#else
+#extension GL_ARB_separate_shader_objects : enable
 
 // Input
 in gl_PerVertex
@@ -18,6 +29,7 @@ out gl_PerVertex
 };
 layout(location=1) out vec4 fsColor;
 layout(location=2) out vec2 fsTex;
+#endif
 
 uniform mat4 proj;
 uniform mat4 camera;

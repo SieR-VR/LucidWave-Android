@@ -1,8 +1,12 @@
-#version 330
-#extension GL_ARB_separate_shader_objects : enable
+#version 100
 
-layout(location=1) in vec2 texVp;
+#ifdef EMBEDDED
+varying vec2 fsTex;
+#else
+#extension GL_ARB_separate_shader_objects : enable
+layout(location=1) in vec2 fsTex;
 layout(location=0) out vec4 target;
+#endif
 
 uniform ivec2 screenCenter;
 // x = bar time
