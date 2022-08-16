@@ -242,12 +242,12 @@ end
 
 Results.render = function(this, showStats);
   if (result.badge > 1) and (not played) then
-    game.PlaySample('result', true);
+    game.PlaySample('result.wav', true);
     played = true;
   end
 
   if (game.GetButton(game.BUTTON_STA) or game.GetButton(game.BUTTON_BCK)) then
-    game.StopSample('result');
+    game.StopSample('result.wav');
   end
 
   if (portrait) then
@@ -557,7 +557,7 @@ end
 screenshot_captured = function(path)
   shotTimer = 5;
   shotPath = path;
-  game.PlaySample('shutter');
+  game.PlaySample('shutter.wav');
 end
 
 local results = Results.new();

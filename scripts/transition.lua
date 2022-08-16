@@ -52,7 +52,7 @@ function render_screen()
 
 	if portrait then
 		if not played then
-			game.PlaySample("exit_gameplay")
+			game.PlaySample("exit_gameplay.wav")
 			played = true
 		end
 
@@ -113,7 +113,7 @@ function render_screen()
 		gfx.Restore()
 	else
 		if not played then
-			game.PlaySample("exit_gameplay")
+			game.PlaySample("exit_gameplay.wav")
 			played = true
 		end
 

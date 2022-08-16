@@ -1,5 +1,3 @@
-
-
 #ifdef EMBEDDED
 varying vec2 texVp;
 #else
@@ -144,7 +142,7 @@ void main()
     float diff = GetDistanceShape(point_diff,N);
     float thing2 = Stretch / diff;
 	float fog = -1. / (diff * 15. * Scale.x) + 1.;
-    fog = clamp(fog, 0, 1);
+    fog = clamp(fog, 0.0, 1.0);
     float texY = thing2;
     texY += timing.y * speed;
 

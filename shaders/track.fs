@@ -26,5 +26,5 @@ void main()
         col.xyz = vec3(0.);
         col.a = col.a > 0.0 ? 0.3 : 0.0;
     }
-    target = col;
+    gl_FragColor = col;
 }

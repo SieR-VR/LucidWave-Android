@@ -494,7 +494,7 @@ end
 
 SongTable.setIndex = function(this, index)
   if (index ~= this.selectedIndex) then
-    game.PlaySample('cursor_song');
+    game.PlaySample('cursor_song.wav');
   end
 
   local delta = index - this.selectedIndex;
@@ -534,7 +534,7 @@ end
 
 SongTable.setDifficulty = function(this, difficulty)
   if (difficulty ~= this.selectedDifficulty) then
-    game.PlaySample('cursor_difficulty');
+    game.PlaySample('cursor_difficulty.wav');
   end
 
   this.selectedDifficulty = difficulty;
@@ -776,7 +776,7 @@ drawSearch = function(deltaTime)
     end
 
     if (searchSound ~= ((songwheel.searchInputActive and 0) or 1)) then
-      game.PlaySample('woosh');
+      game.PlaySample('woosh.wav');
     end
 
     searchSound = (songwheel.searchInputActive and 0) or 1;
@@ -810,7 +810,7 @@ drawSearch = function(deltaTime)
     gfx.FillColor(245, 65, 125, 255);
 
     if (searchSound ~= ((songwheel.searchInputActive and 0) or 1)) then
-      game.PlaySample('woosh');
+      game.PlaySample('woosh.wav');
     end
 
     searchSound = (songwheel.searchInputActive and 0) or 1;

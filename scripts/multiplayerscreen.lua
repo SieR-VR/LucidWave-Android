@@ -407,7 +407,7 @@ draw_diffs = function(diffs, x, y, w, h, selectedDiff)
 end
 
 set_diff = function(oldDiff, newDiff)
-    game.PlaySample("click-02")
+    game.PlaySample("click-02.wav")
     doffset = doffset + oldDiff - newDiff
 end;
 
@@ -480,7 +480,7 @@ change_selected_room = function(off)
         ioffset = ioffset - new_index + selected_room_index;
     end
 
-    game.PlaySample("menu_click")
+    game.PlaySample("menu_click.wav")
 
     selected_room_index = new_index;
 end
@@ -969,15 +969,15 @@ Tcp.SetTopicHandler("room.update", function(data)
     end
 
     if user_id == host and #data.users > 1 and all_ready and not prev_all_ready then
-        repeat_sound("click-02", 3, .1)
+        repeat_sound("click-02.wav", 3, .1)
     end
 
     if data.host == user_id and host ~= user_id then
-        repeat_sound("click-02", 3, .1)
+        repeat_sound("click-02.wav", 3, .1)
     end
 
     if data.song ~=nil and last_song ~=data.song then
-        game.PlaySample("menu_click")
+        game.PlaySample("menu_click.wav")
         last_song = data.song
     end
     host = data.host
@@ -990,7 +990,7 @@ Tcp.SetTopicHandler("room.update", function(data)
     mirror_mode = data.mirror_mode
     do_rotate = data.do_rotate
     if data.start_soon and not start_game_soon then
-        repeat_sound("click-01", 5, 1)
+        repeat_sound("click-01.wav", 5, 1)
     end
     start_game_soon = data.start_soon
 
